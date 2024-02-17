@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@tdaal-next/libs": ["libs/src/index.ts"],
+      "@tdaal-next/libs/server": ["libs/src/server.ts"],
+      "@tdaal-next/test-lib": ["libs/test-lib/src/index.ts"],
+      "@tdaal-next/test-lib/server": ["libs/test-lib/src/server.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -1,0 +1,20 @@
+{
+  "name": "client",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/client",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "options": {
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/src/styles"]
+        },
+        "extractCss": true
+      }
+    },
+    "dev": {
+      "command": "next dev --port 3020"
+    }
+  },
+  "tags": []
+}
