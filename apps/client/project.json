@@ -13,7 +13,7 @@
       }
     },
     "dev": {
-      "command": "next dev --port 3020"
+      "command": "next dev --port 3002"
     }
   },
   "tags": []

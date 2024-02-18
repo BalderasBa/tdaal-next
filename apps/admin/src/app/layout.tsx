@@ -1,3 +1,4 @@
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 import './global.scss';
 
 export const metadata = {
@@ -7,12 +8,19 @@ export const metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
+  const messages = useMessages();
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang={locale}>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }
