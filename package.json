@@ -5,13 +5,16 @@
   "scripts": {
     "start:dev": "nx run-many --target=dev --all --maxParallel=100",
     "admin:dev": "nx dev admin",
-    "website:dev": "nx dev client"
+    "client:dev": "nx dev client"
   },
   "private": true,
   "dependencies": {
     "next": "14.0.4",
+    "next-intl": "^3.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
