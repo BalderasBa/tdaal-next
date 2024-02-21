@@ -1,14 +1,12 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function Index() {
   const t = useTranslations('Index');
-
   return (
     <div className="text-center">
       <h1>
-        <span>{t('tdaal')}</span>
-        <span> Hello there, </span>
-        Welcome admin 👋
+        <span> Hello there, {t('tdaal')}</span>
+        Welcome client 👋
       </h1>
     </div>
   );
