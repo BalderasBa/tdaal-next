@@ -1,0 +1,65 @@
+// [delete me]
+
+input[type='submit'].button_s,
+.button_s {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #00adbb;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 20px;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  text-align: center;
+  display: block;
+  min-width: fit-content;
+  height: fit-content;
+  min-height: 30px;
+  transition: 200ms ease-in;
+  &:hover {
+    background-color: #fff;
+    border: 1px solid #052c4b;
+    color: #052c4b;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  }
+}
+input[type='submit'].button_p,
+.button_p,
+input[type='submit'].button_p_trans,
+.button_p_trans {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.75rem;
+  background-color: #052c4b;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  min-width: fit-content;
+  height: fit-content;
+  min-height: 30px;
+  text-transform: uppercase;
+  transition: 300ms ease-in;
+  &:hover {
+    background-color: #00adbb;
+    color: #fff;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  }
+}
+input[type='submit'].button_p_trans,
+.button_p_trans {
+  background-color: #fff;
+  color: #052c4b;
+  font-size: 0.75rem;
+  border: 1px solid #052c4b;
+  &:hover {
+    color: #fff;
+    background-color: #00adbb;
+    border: 1px solid transparent;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  }
+}
