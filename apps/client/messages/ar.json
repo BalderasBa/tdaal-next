@@ -1,5 +1,14 @@
 {
   "Index": {
     "tdaal": "تدال"
+  },
+  "Header": {
+    "createAccount": "إنشاء حساب",
+    "login": "تسجيل الدخول",
+    "bookings": "الحجوزات",
+    "userName": "اسم المستخدم",
+    "accountSettings": "إعدادات الحساب",
+    "myTrips": "رحلاتي",
+    "logout": "تسجيل الخروج"
   }
 }
