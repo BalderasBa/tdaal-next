@@ -4,28 +4,34 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import profile_pic from '../lib/assets/icons/profil-skeltone.jpg';
+// import profile_pic from '../lib/assets/icons/profil-skeltone.jpg';
 import logo from '../lib/assets/icons/tdaal-logo.png';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import NavbarProfile from './components/Profile';
+import { Avatar, AvatarImage } from '@tdaal/libs';
+import avatar from '../../lib/assets/icons/tdaal-logo.png';
 
 function Header() {
   const t = useTranslations('Header');
-  const [profile, setProfile] = useState(false);
 
   return (
     <nav className="fixed top-0 flex items-center justify-between w-full h-16 py-0 overflow-hidden border-b border-gray-300 px-7">
-      {/* <div className="lg:max-w-[96%] max-w-full"> */}
       <Link
         href="/home"
         className="hover:bg-[#052c4b] hover:text-[#fff] cursor-pointer block p-2 text-[#052c4b] transition capitalize"
         onClick={() => window.scroll(0, 0)}
       >
-        <Image
+        logo
+        <Avatar>
+        <AvatarImage width={36} height={48} src={`${avatar}`} alt='tdaal logo' />
+      </Avatar>
+        {/* <Image
           src={logo}
           className="h-20 rounded-lg lg:h-12 w-9"
           alt="tdaal logo"
           width={36}
           height={48}
-        />
+        /> */}
       </Link>
       <div className="flex items-center justify-center">
         <div className="hover:bg-secondary hover:text-white hover:shadow-[0_7px_25px_rgba(0,0,0,0.08)] px-5 py-1 text-xs font-bold text-center uppercase block min-w-fit h-fit min-h-[30px] transition-[300ms] duration-[ease-in] rounded-sm cursor-pointer tr text-primary-foreground bg-primary">
@@ -40,11 +46,13 @@ function Header() {
         <span className="border-l-2 border-l-[#052c4b] translate-x-1/2 h-6">
           &nbsp;
         </span>
-        <Link href="/track" className="button_p">
+        <Link href="/track" className="">
           {t('bookings')}
         </Link>
 
-        <div
+        <NavbarProfile />
+
+        {/* <div
           className={
             profile
               ? 'relative flex hover:bg-[#ecf6fd] items-center px-3 py-1 rounded-sm cursor-pointer transition rounded-tr-2xl'
@@ -61,9 +69,9 @@ function Header() {
             height={32}
           />
           {profile ? (
-            <i className="fa-solid fa-caret-up"></i>
+            <ChevronUp />
           ) : (
-            <i className="fa-solid fa-caret-down"></i>
+            <ChevronDown />
           )}
           {profile && (
             <div className="absolute p-1 top-full w-full left-0 right-0 z-50 rounded-e-lg bg-[#fff]">
@@ -71,22 +79,18 @@ function Header() {
                 {t('accountSettings')}
               </Link>
               <Link href="/my_trips">{t('myTrips')}</Link>
-              {/* <Link href="#" onClick={() => window.scroll(0, 0)}>
+              <Link href="#" onClick={() => window.scroll(0, 0)}>
                 {t('myTrips')}
-              </Link> */}
+              </Link>
               <button
-                // href="/auth/sign_in"
                 onClick={() => console.log('logout')}
               >
                 {t('logout')}
               </button>
             </div>
           )}
-        </div>
-
-        {/* <LanguageSwitcher /> */}
+        </div> */}
       </div>
-      {/* </div> */}
     </nav>
   );
 }
