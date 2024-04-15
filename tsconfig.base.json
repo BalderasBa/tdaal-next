@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "jsx": "preserve",
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -15,11 +16,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tdaal-next/libs": ["libs/src/index.ts"],
-      "@tdaal-next/libs/server": ["libs/src/server.ts"],
-      "@tdaal-next/test-lib": ["libs/test-lib/src/index.ts"],
-      "@tdaal-next/test-lib/server": ["libs/test-lib/src/server.ts"]
-    }
+      "@tdaal/libs": ["libs/src/index.ts"],
+    },
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
   },
   "exclude": ["node_modules", "tmp"]
 }

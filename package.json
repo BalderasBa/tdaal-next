@@ -10,11 +10,18 @@
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
-    "lint-staged": "npx lint-staged",
+    "lint-staged": "lint-staged",
+    "postinstall": "husky install",
     "prepare": "husky"
   },
   "private": true,
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.341.0",
     "next": "14.0.4",
     "next-intl": "^3.8.0",
     "react": "18.2.0",
@@ -72,6 +79,14 @@
     "typescript": "~5.3.2",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
   },
   "description": "My webpack project"
 }
