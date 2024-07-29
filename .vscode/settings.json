@@ -1,3 +1,7 @@
 {
-    "i18n-ally.localesPaths": ["apps/admin/messages","apps/client/messages"]
+    "i18n-ally.localesPaths": [
+        "apps/admin/messages",
+        "apps/client/messages"
+    ],
+    "window.zoomLevel": 0
 }

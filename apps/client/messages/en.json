@@ -1,5 +1,15 @@
 {
   "Index": {
     "tdaal": "Tdaal"
+  },
+  "Header": {
+    "createAccount": "Create Account",
+    "login": "Login",
+    "bookings": "Bookings",
+    "userName": "User Name",
+    "accountSettings": "Account Settings",
+    "myTrips": "My Trips",
+    "logout": "Logout"
   }
+
 }
