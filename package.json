@@ -1,13 +1,12 @@
 {
-  "name": "my-webpack-project",
+  "name": "@tdaal-next/source",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start:dev": "nx run-many --target=dev --all --maxParallel=100",
-    "admin:dev": "nx dev admin",
-    "client:dev": "nx dev client",
-    "build": "webpack --mode=production --node-env=production",
-    "build:dev": "webpack --mode=development",
+    "dev": "nx run-many --target=dev --all --maxParallel=100",
+    "admin": "nx dev admin --port=3000",
+    "client": "nx dev client --port=3001",
+    "build": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
     "lint-staged": "lint-staged",

@@ -1,13 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
-  prefix: "Yes",
+  mode: 'jit',
+  content: ['{libs, apps}/**/*.{js,ts,jsx,tsx,mdx}'],
+  prefix: "",
   theme: {
     container: {
       center: true,

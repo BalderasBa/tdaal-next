@@ -13,7 +13,10 @@
       }
     },
     "dev": {
-      "command": "next dev --port 3001"
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "next dev --port=3001"
+      }
     }
   },
   "tags": []
